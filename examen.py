@@ -22,18 +22,24 @@ def llistar_noms(llista):
         print(f'Ara mateix tenim aquests noms en la llista {noms}')
     # Hem de mostrar per pantalla tots els noms que hem afegit a la llista
 
+
+
 def ordenar_noms(llista):
     llista.sort()
     print(f"llista ordenada {llista}")
     # Hem d'ordenar la llista de noms
     # Un cop ordenada la llista, llistem tots els noms
 
+
+
 def mostrar_menu():
     print("[A] Afegir valor: ")
-    print("[L] Afegir valor: ")
-    print("[O] Afegir valor: ")
+    print("[L] Llista Noms: ")
+    print("[O] Ordenar llista: ")
     print("[F] FInalitzar: ")
     # Hem de mostrar el menú que ens demanen a l'enunciat
+
+
 
 def demanar_opcio():
     menu_correcte= ['a','l','o','f']
@@ -51,9 +57,20 @@ def demanar_opcio():
 
     # Retornarem l'opció correcta sel.leccionada        
 
-def gestionar_opcio(opcio, llista):
-    opcio
 
+def gestionar_opcio(opcio, llista):
+    finalitzar= False
+    match opcio:
+        case 'a':
+            afegir_nom(llista)
+        case 'l':
+            llistar_noms(llista)
+        case 'o':
+            ordenar_noms(llista)
+        case 'f':
+            print('Gracies per fer servir el nostre generador')
+            finalitzar= True
+    return finalitzar
 
 
     # En funció de l'opció escollida per l'usuari, haurem de cridar a les funcions adients per fer el que ens demanen
@@ -63,6 +80,11 @@ def gestionar_opcio(opcio, llista):
 
 
 # Programa principal
+llista = []
+finalitzar= False
+while not finalitzar: 
+    valor=demanar_opcio()
+    finalitzar = gestionar_opcio(valor, llista)
 
 
 # Heu de treballar amb una llista a la que li farem diverses operacions mostrades al menú
