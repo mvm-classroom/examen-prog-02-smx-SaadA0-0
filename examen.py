@@ -24,7 +24,7 @@ def llistar_noms(llista):
 
 def ordenar_noms(llista):
     llista.sort()
-    print(f'llista ordenada {llista}')
+    print(f"llista ordenada {llista}")
     # Hem d'ordenar la llista de noms
     # Un cop ordenada la llista, llistem tots els noms
 
@@ -36,23 +36,26 @@ def mostrar_menu():
     # Hem de mostrar el menú que ens demanen a l'enunciat
 
 def demanar_opcio():
-   
     menu_correcte= ['a','l','o','f']
     valor_correcte= False
+    mostrar_menu()
     while not valor_correcte:
-        mostrar_menu()
-        valor= input('Selecionar una opcio: ').lower
+        valor= input('Selecionar una opcio: ').lower()
+        print(valor)
         if valor not in menu_correcte:
+            mostrar_menu()
             print('El valor no es correcte')
         else:
             valor_correcte = True
+    return valor
 
-    # Si ens introdueix un valor incorrecte hem de tornar a mostrar el menú i tornar a demanar opció
-    # Si ens introdueix la lletra correcta en minúscula, la donarem per bona
     # Retornarem l'opció correcta sel.leccionada        
 
 def gestionar_opcio(opcio, llista):
-    print("PENDENT: gestionar_opcio")
+    opcio
+
+
+
     # En funció de l'opció escollida per l'usuari, haurem de cridar a les funcions adients per fer el que ens demanen
     # Heu de fer servir `match`
     # Si no ho sabeu fer amb `match` podeu utilitzar altres estructures condicionals però no obtindreu tota la puntuació    
@@ -61,8 +64,7 @@ def gestionar_opcio(opcio, llista):
 
 # Programa principal
 
-obtenir_nom()
+
 # Heu de treballar amb una llista a la que li farem diverses operacions mostrades al menú
 # Si ens introdueixen l'opció "F" acabarem el programa
 # Si no ens introdueixen l'opció "F" farem l'acció corresponent i tornarem a preguntar
-demanar_opcio()
