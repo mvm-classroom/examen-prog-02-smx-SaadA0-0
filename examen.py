@@ -95,7 +95,7 @@ def gestionar_opcio(opcio, llista):
 # Programa principal
 llista = []
 finalitzar= False
-while not finalitzar: # Creant la 
+while not finalitzar: # Creant un bucle per tornar a mostra el menu i tambe per finalitzar el generador
     valor=demanar_opcio()
     finalitzar = gestionar_opcio(valor, llista)
 
