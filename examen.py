@@ -8,20 +8,21 @@ def obtenir_nom():
     noms = ["Timotei", "Timonel", "Timbaler", "Tennebaum", "TaoPaiPai", "Teruel", "Tirolés", "Traginer", "Tourmalet"]
     # Llista de cognoms incorrectes
     cognoms = ["Chandalet", "Camembert", "Sabadell", "Chevrolet", "Caganer", "Bechamel", "Casteller", "Churumbel", "Cafeaulait", "Crivillé", "Charmander"]
-    return(f"{random.choice(noms)} {random.choice(cognoms)}") # Estic fent servir el random 
+
+    return(f"{random.choice(noms)} {random.choice(cognoms)}") # Estic fent servir el random per crea un nom aleatori separat amb un esapai
 
 def afegir_nom(llista):
     # Hem d'obtenir un nom aleatori, afegir-lo a la llista i mostrar per pantalla que hem afegit aquest nom
     nom = obtenir_nom()
-    print('____________________')
     print('     ')
     print(f"        Acabem de afegir aquest nom === {nom}")
-    llista.append(nom)
+
+    llista.append(nom) # Afegint el valor a l'llista
 
 
 def llistar_noms(llista):
+    print('     ')
     for noms in llista:
-            print('     ')
             print(f'            {noms}')
     # Hem de mostrar per pantalla tots els noms que hem afegit a la llista
 
@@ -29,9 +30,9 @@ def llistar_noms(llista):
 
 def ordenar_noms(llista):
     llista.sort()
+    print(f"")
     for noms in llista:
-        print('     ')
-        print(f"            llista Ordenada ==== {noms}")
+        print(f" llista Ordenada:   {noms}")
     # Hem d'ordenar la llista de noms
     # Un cop ordenada la llista, llistem tots els noms
 
@@ -54,9 +55,11 @@ def demanar_opcio():
     valor_correcte= False
     mostrar_menu()
     while not valor_correcte:
-        valor= input('Selecionar una opcio: ').lower()
+        print('     ')
+        valor= input(' Selecionar una opcio: ').lower()
         if valor not in menu_correcte:
             mostrar_menu()
+            print('     ')
             print('El valor no es correcte')
         else:
             valor_correcte = True
