@@ -12,21 +12,22 @@ def obtenir_nom():
 
 def afegir_nom(llista):
     # Hem d'obtenir un nom aleatori, afegir-lo a la llista i mostrar per pantalla que hem afegit aquest nom
-    nom= obtenir_nom()
+    nom = obtenir_nom()
     print(f"Acabem de afegir aquest nom {nom}")
     llista.append(nom)
 
 
 def llistar_noms(llista):
     for noms in llista:
-        print(f'Ara mateix tenim aquests noms en la llista {noms}')
+            print(f'            {noms}')
     # Hem de mostrar per pantalla tots els noms que hem afegit a la llista
 
 
 
 def ordenar_noms(llista):
     llista.sort()
-    print(f"llista ordenada {llista}")
+    for noms in llista:
+        print(f"            llista Ordenada ==== {noms}")
     # Hem d'ordenar la llista de noms
     # Un cop ordenada la llista, llistem tots els noms
 
@@ -47,7 +48,6 @@ def demanar_opcio():
     mostrar_menu()
     while not valor_correcte:
         valor= input('Selecionar una opcio: ').lower()
-        print(valor)
         if valor not in menu_correcte:
             mostrar_menu()
             print('El valor no es correcte')
