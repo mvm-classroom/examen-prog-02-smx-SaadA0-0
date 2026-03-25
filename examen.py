@@ -57,7 +57,7 @@ def mostrar_menu():
 def demanar_opcio():
     menu_correcte= ['a','l','o','f']
     valor_correcte= False
-    mostrar_menu() # crideant la funcio de menu
+    mostrar_menu() # cridant la examenfuncio de menu
     while not valor_correcte:
         print('     ')
         valor= input(' Selecionar una opcio: ').lower()
