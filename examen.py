@@ -15,15 +15,19 @@ def afegir_nom(llista):
     # Hem d'obtenir un nom aleatori, afegir-lo a la llista i mostrar per pantalla que hem afegit aquest nom
     nom = obtenir_nom()
     print('     ')
-    print(f"        Acabem de afegir aquest nom === {nom}")
+    print(f"        Nom afegit a la llista === {nom}")
 
     llista.append(nom) # Afegint el valor a l'llista
 
 
 def llistar_noms(llista):
     print('     ')
-    for noms in llista:
+    if llista == []:
+        print('La llista ara mateix esta buida')
+    else:
+        for noms in llista:
             print(f'            {noms}')
+
     # Hem de mostrar per pantalla tots els noms que hem afegit a la llista
 
 
@@ -44,7 +48,7 @@ def mostrar_menu():
     print("[A] Afegir valor: ")
     print("[L] Llista Noms: ")
     print("[O] Ordenar llista: ")
-    print("[F] FInalitzar: ")
+    print("[F] Finalitzar: ")
     print('____________________')
     # Hem de mostrar el menú que ens demanen a l'enunciat
 
@@ -69,7 +73,7 @@ def demanar_opcio():
 
 
 def gestionar_opcio(opcio, llista):
-    finalitzar= False
+    finalitzar= False # Creant un variable per gestiona el tema de finalitzacio del generador
     match opcio:
         case 'a':
             afegir_nom(llista)
@@ -85,14 +89,13 @@ def gestionar_opcio(opcio, llista):
 
     # En funció de l'opció escollida per l'usuari, haurem de cridar a les funcions adients per fer el que ens demanen
     # Heu de fer servir `match`
-    # Si no ho sabeu fer amb `match` podeu utilitzar altres estructures condicionals però no obtindreu tota la puntuació    
 
 
 
 # Programa principal
 llista = []
 finalitzar= False
-while not finalitzar: 
+while not finalitzar: # Creant la 
     valor=demanar_opcio()
     finalitzar = gestionar_opcio(valor, llista)
 
