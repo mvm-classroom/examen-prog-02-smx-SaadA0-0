@@ -10,27 +10,43 @@ def obtenir_nom():
     cognoms = ["Chandalet", "Camembert", "Sabadell", "Chevrolet", "Caganer", "Bechamel", "Casteller", "Churumbel", "Cafeaulait", "Crivillé", "Charmander"]
     return(f"{random.choice(noms)} {random.choice(cognoms)}")
 
-
 def afegir_nom(llista):
-    print("PENDENT: afegir_nom")
     # Hem d'obtenir un nom aleatori, afegir-lo a la llista i mostrar per pantalla que hem afegit aquest nom
+    nom= obtenir_nom()
+    print(f"Acabem de afegir aquest nom {nom}")
+    llista.append(nom)
+
 
 def llistar_noms(llista):
-    print("PENDENT: llistar_noms")
+    for noms in llista:
+        print(f'Ara mateix tenim aquests noms en la llista {noms}')
     # Hem de mostrar per pantalla tots els noms que hem afegit a la llista
 
 def ordenar_noms(llista):
-    print("PENDENT: ordenar_noms")
+    llista.sort()
+    print(f'llista ordenada {llista}')
     # Hem d'ordenar la llista de noms
     # Un cop ordenada la llista, llistem tots els noms
 
 def mostrar_menu():
-    print("PENDENT: mostrar_menu")
+    print("[A] Afegir valor: ")
+    print("[L] Afegir valor: ")
+    print("[O] Afegir valor: ")
+    print("[F] FInalitzar: ")
     # Hem de mostrar el menú que ens demanen a l'enunciat
 
 def demanar_opcio():
-    print("PENDENT: demanar_opcio")
-    # Hem de demanar a l'usuari una de les opcions del menú
+   
+    menu_correcte= ['a','l','o','f']
+    valor_correcte= False
+    while not valor_correcte:
+        mostrar_menu()
+        valor= input('Selecionar una opcio: ').lower
+        if valor not in menu_correcte:
+            print('El valor no es correcte')
+        else:
+            valor_correcte = True
+
     # Si ens introdueix un valor incorrecte hem de tornar a mostrar el menú i tornar a demanar opció
     # Si ens introdueix la lletra correcta en minúscula, la donarem per bona
     # Retornarem l'opció correcta sel.leccionada        
@@ -49,3 +65,4 @@ obtenir_nom()
 # Heu de treballar amb una llista a la que li farem diverses operacions mostrades al menú
 # Si ens introdueixen l'opció "F" acabarem el programa
 # Si no ens introdueixen l'opció "F" farem l'acció corresponent i tornarem a preguntar
+demanar_opcio()
