@@ -8,17 +8,20 @@ def obtenir_nom():
     noms = ["Timotei", "Timonel", "Timbaler", "Tennebaum", "TaoPaiPai", "Teruel", "Tirolés", "Traginer", "Tourmalet"]
     # Llista de cognoms incorrectes
     cognoms = ["Chandalet", "Camembert", "Sabadell", "Chevrolet", "Caganer", "Bechamel", "Casteller", "Churumbel", "Cafeaulait", "Crivillé", "Charmander"]
-    return(f"{random.choice(noms)} {random.choice(cognoms)}")
+    return(f"{random.choice(noms)} {random.choice(cognoms)}") # Estic fent servir el random 
 
 def afegir_nom(llista):
     # Hem d'obtenir un nom aleatori, afegir-lo a la llista i mostrar per pantalla que hem afegit aquest nom
     nom = obtenir_nom()
-    print(f"Acabem de afegir aquest nom {nom}")
+    print('____________________')
+    print('     ')
+    print(f"        Acabem de afegir aquest nom === {nom}")
     llista.append(nom)
 
 
 def llistar_noms(llista):
     for noms in llista:
+            print('     ')
             print(f'            {noms}')
     # Hem de mostrar per pantalla tots els noms que hem afegit a la llista
 
@@ -27,6 +30,7 @@ def llistar_noms(llista):
 def ordenar_noms(llista):
     llista.sort()
     for noms in llista:
+        print('     ')
         print(f"            llista Ordenada ==== {noms}")
     # Hem d'ordenar la llista de noms
     # Un cop ordenada la llista, llistem tots els noms
@@ -34,10 +38,13 @@ def ordenar_noms(llista):
 
 
 def mostrar_menu():
+    print('____________________')
+    print('                     ')
     print("[A] Afegir valor: ")
     print("[L] Llista Noms: ")
     print("[O] Ordenar llista: ")
     print("[F] FInalitzar: ")
+    print('____________________')
     # Hem de mostrar el menú que ens demanen a l'enunciat
 
 
