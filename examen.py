@@ -1,19 +1,15 @@
 #Generador de noms incorrectes per Timothée Chalamet
 
 # Posa aquí qualsevol import que necessitis com rand, math, time...
-
+import random
 
 def obtenir_nom():
-    # Llista de noms incorrectes
+    #Llista de noms incorrectes
     noms = ["Timotei", "Timonel", "Timbaler", "Tennebaum", "TaoPaiPai", "Teruel", "Tirolés", "Traginer", "Tourmalet"]
-
     # Llista de cognoms incorrectes
     cognoms = ["Chandalet", "Camembert", "Sabadell", "Chevrolet", "Caganer", "Bechamel", "Casteller", "Churumbel", "Cafeaulait", "Crivillé", "Charmander"]
+    return(f"{random.choice(noms)} {random.choice(cognoms)}")
 
-
-    print("PENDENT: obtenir_nom")
-    # Aquí has de construir un nom amb un nomb aleatori i un cognom aleatori de les llistes
-    # retornar el nom construït
 
 def afegir_nom(llista):
     print("PENDENT: afegir_nom")
@@ -49,7 +45,7 @@ def gestionar_opcio(opcio, llista):
 
 # Programa principal
 
-print("PENDENT: programa principal")
+obtenir_nom()
 # Heu de treballar amb una llista a la que li farem diverses operacions mostrades al menú
 # Si ens introdueixen l'opció "F" acabarem el programa
 # Si no ens introdueixen l'opció "F" farem l'acció corresponent i tornarem a preguntar
