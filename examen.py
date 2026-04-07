@@ -21,7 +21,7 @@ def afegir_nom(llista):
 
 
 def llistar_noms(llista):
-    print('     ')
+    print('     ') #Espai
     if llista == []:
         print('La llista ara mateix esta buida')
     else:
@@ -43,13 +43,13 @@ def ordenar_noms(llista):
 
 
 def mostrar_menu():
-    print('____________________')
-    print('                     ')
+    print('____________________') #Espai
+    print('                     ') #Espai
     print("[A] Afegir valor: ")
     print("[L] Llista Noms: ")
     print("[O] Ordenar llista: ")
     print("[F] Finalitzar: ")
-    print('____________________')
+    print('____________________')#Espai
     # Hem de mostrar el menú que ens demanen a l'enunciat
 
 
@@ -57,14 +57,14 @@ def mostrar_menu():
 def demanar_opcio():
     menu_correcte= ['a','l','o','f']
     valor_correcte= False
-    mostrar_menu() # cridant la examenfuncio de menu
+    mostrar_menu() # cridant la funcio de mostrar menu
     while not valor_correcte:
-        print('     ')
+        print('     ') #Espai
         valor= input(' Selecionar una opcio: ').lower()
         if valor not in menu_correcte:
             mostrar_menu()
-            print('     ')
-            print('El valor no es correcte')
+            print('     ') #Espai
+            print('El valor no es correcte') 
         else:
             valor_correcte = True
     return valor
