@@ -35,8 +35,8 @@ def llistar_noms(llista):
 def ordenar_noms(llista):
     llista.sort()
     print(f"")
-    for noms in llista:
-        print(f" llista Ordenada:   {noms}")
+    llistar_noms(llista)
+
     # Hem d'ordenar la llista de noms
     # Un cop ordenada la llista, llistem tots els noms
 
